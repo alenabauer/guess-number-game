@@ -6,6 +6,7 @@ console.log(`The secret number is ${secretNumber}`)
 
 // Add an event listener to the "Check!" button
 const checkButton = document.querySelector('.check');
+const againButton = document.querySelector('.again');
 const input = document.querySelector('.guess');
 const message = document.querySelector('.message');
 const scoreSpan = document.querySelector('.score');
@@ -17,7 +18,9 @@ checkButton.addEventListener('click', (e) => {
   if (!userGuess) {
     message.innerHTML = "No number!"
   } else if (userGuess === secretNumber) {
-    message.innerHTML = "Correct!"
+    message.innerHTML = "Correct!";
+    document.querySelector('.number').innerHTML = secretNumber;
+    document.querySelector('.number').style.background = '#678D58';
   } else if (userGuess > secretNumber) { // decrease the score by one in the case of a wrong guess
     score--;
     scoreSpan.innerHTML = score;
@@ -35,4 +38,8 @@ checkButton.addEventListener('click', (e) => {
       message.innerHTML = "Game over!"
     }
   }
+})
+
+againButton.addEventListener('click', (e) => {
+  window.location.reload();
 })

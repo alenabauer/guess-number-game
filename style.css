@@ -67,6 +67,7 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  border-radius: 8px;
 }
 
 .between {
@@ -93,6 +94,7 @@ h1 {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+  border-radius: 8px;
 }
 
 .btn {
@@ -103,6 +105,7 @@ h1 {
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .btn:hover {
